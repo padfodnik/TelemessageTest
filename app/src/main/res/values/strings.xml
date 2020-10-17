@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TelemessageTest</string>
+    <string name="hint_name">Name…</string>
+    <string name="hint_score">max 100</string>
+    <string name="button_save">Save</string>
+    <string name="empty_not_saved">Student not saved </string>
+</resources>
