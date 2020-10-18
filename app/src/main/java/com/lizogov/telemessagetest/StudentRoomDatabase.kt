@@ -82,9 +82,12 @@ abstract class StudentRoomDatabase : RoomDatabase() {
             Timer().scheduleAtFixedRate(object : TimerTask() {
                 override fun run() {
                     val res = studentDao.getStudents()
-                    for (a in res) {
-                        a.averageScore = nextInt(101)
+                    if (res.isNotEmpty()){
+                        for (a in res) {
+                            a.averageScore = nextInt(101)
+                        }
                     }
+
                     studentDao.deleteAll()
                     studentDao.insertAll(res)
                 }
